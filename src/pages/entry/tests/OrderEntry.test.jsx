@@ -28,7 +28,7 @@ describe('Order Entry Component Tests', () => {
     render(<OrderEntry />);
 
     await waitFor(async () => {
-
+      // REMEMBER THAT WE ARE MAKING 2 SERVER CALLS HERE, SO WE HAVE TO WAIT FOR 2 RESPONSES, THAT´S WHY WE USE waitFor
       const alertComponents = await screen.findAllByRole('alert');
 
       expect(alertComponents).toHaveLength(2);
